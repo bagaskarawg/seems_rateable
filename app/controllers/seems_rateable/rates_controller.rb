@@ -2,7 +2,7 @@ require_dependency "application_controller"
 
 module SeemsRateable
   class RatesController < ApplicationController
-    before_filter :require_login
+    before_action :require_login
 
     def create
       @rate = Rate.create! rate_params
